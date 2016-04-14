@@ -7,7 +7,7 @@ ENV PATH /opt/oauth2-proxy/bin:$PATH
 
 RUN mkdir -p /opt/oauth2-proxy/bin && mkdir /opt/oauth2-proxy/etc && \
     curl -L -k --silent \
-      https://github.com/bitly/oauth2_proxy/releases/download/v$OAUTH2_PROXY_VERSION/$ARCHIVE.tar.gz  | \
+      https://github.com/mslsoftware/oauth2_proxy/releases/download/v$OAUTH2_PROXY_VERSION/$ARCHIVE.tar.gz  | \
       tar xz --strip-components 1 -C /opt/oauth2-proxy/bin
 
 CMD oauth2_proxy -config=/opt/oauth2-proxy/etc/config
